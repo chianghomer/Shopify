@@ -1,2 +1,1 @@
-# Tradepost---Regit.
-Tradepost pre-beta
+# Shopify
