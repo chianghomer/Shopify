@@ -19,13 +19,11 @@ public class Main {
     private static final String KEYBOARD = "keyboard";
     private static final String URL = "http://shopicruit.myshopify.com/products.json";
 
-
     public static void main(String args[]){
 
         String response = readTask(URL);
         ArrayList<JSONObject> itemVariantList = parseAvailableVariantTask(response, COMP);
         itemVariantList.addAll(parseAvailableVariantTask(response, KEYBOARD));
-
 
         if (itemVariantList.size() != 0) {
 
@@ -84,16 +82,13 @@ public class Main {
             else
                 return currentPrice;
 
-
-            }catch (JSONException e){
+            } catch (JSONException e){
 
                 e.printStackTrace();
                 return -1;
             }
 
-
     }
-
 
     /**
      * Parse the all the available variants of the given product type from the response string of the url requested.
@@ -131,7 +126,6 @@ public class Main {
         }
 
         return itemVariantArrayList;
-
 
     }
 
